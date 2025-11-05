@@ -24,6 +24,11 @@ public class LoginHandler {
         return LOGIN_VIEW;
     }
 
+    @GetMapping("/error")
+    public String showError() {
+        return "error";
+    }
+
     @PostMapping("/login")
     public String login(@Valid @ModelAttribute("loginForm") LoginForm form,
             BindingResult bindingResult,
